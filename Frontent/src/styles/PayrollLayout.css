@@ -1,0 +1,53 @@
+/* Contenedor principal del layout de nómina */
+.payroll-layout-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc; /* Color de fondo muy claro, similar a Tailwind 'bg-slate-50' */
+}
+
+/* Contenido principal del layout (sin la barra lateral) */
+.payroll-content {
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre los diferentes elementos de la página */
+    margin-left: 250px; /* Margen para dejar espacio al Sidebar fijo */
+}
+
+/* Estilos para el botón de "Volver al Dashboard" */
+.back-to-dashboard-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e8f0; /* Fondo gris claro */
+    color: #475569; /* Texto gris oscuro */
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* Botón redondeado */
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    width: fit-content; /* El ancho se ajusta al contenido */
+}
+
+.back-to-dashboard-button:hover {
+    background-color: #cbd5e1; /* Color un poco más oscuro al pasar el cursor */
+}
+
+.back-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* Estilos para los widgets/componentes dentro del layout */
+.concept-affectation-form,
+.data-summary-card,
+.payroll-calendar {
+    background-color: #ffffff;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+}
