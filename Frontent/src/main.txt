@@ -1,0 +1,93 @@
+import os
+import subprocess
+from pathlib import Path
+
+def create_full_project_txt():
+    output_file = "_Full-Project.txt"
+    extensions_to_exclude = ['.css', '.pyc', '.exe', '.dll', '.ico', '.png', '.jpg', '.jpeg', '.gif', '.bmp']
+    folders_to_exclude = ['.git', '__pycache__', 'node_modules', '.venv', 'venv', 'env', 'dist', 'build']
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        # 1. Ejecutar tree /f y colocar el contenido
+        f.write("# ESTRUCTURA DEL PROYECTO\n\n")
+        
+        try:
+            # En Windows
+            result = subprocess.run(['tree', '/f'], capture_output=True, text=True, shell=True)
+            tree_output = result.stdout
+            f.write(tree_output)
+        except:
+            # En Linux/Mac o si falla tree
+            f.write("Estructura de archivos:\n")
+            for root, dirs, files in os.walk('.'):
+                # Filtrar carpetas excluidas
+                dirs[:] = [d for d in dirs if d not in folders_to_exclude]
+                
+                level = root.replace('.', '').count(os.sep)
+                indent = '│   ' * level
+                folder_name = os.path.basename(root) if root != '.' else '.'
+                if folder_name != '.':
+                    f.write(f'{indent}├── {folder_name}/\n')
+                
+                for i, file in enumerate(files):
+                    if any(file.endswith(ext) for ext in extensions_to_exclude) or file == output_file:
+                        continue
+                    is_last = (i == len(files) - 1)
+                    file_indent = '│   ' * (level + 1)
+                    connector = '└── ' if is_last else '├── '
+                    f.write(f'{file_indent}{connector}{file}\n')
+        
+        # 2. Hacer 2 enters y luego añadir "---" luego 2 enters más
+        f.write('\n\n---\n\n')
+        
+        # 3. Entrar en TODOS los archivos (menos .css y excluidos) y copiar el contenido
+        f.write("# CONTENIDO DE LOS ARCHIVOS\n\n")
+        
+        for root, dirs, files in os.walk('.'):
+            # Filtrar carpetas excluidas
+            dirs[:] = [d for d in dirs if d not in folders_to_exclude]
+            
+            for file in sorted(files):  # Ordenar alfabéticamente
+                # Verificar si el archivo debe ser excluido
+                should_exclude = False
+                for ext in extensions_to_exclude:
+                    if file.endswith(ext):
+                        should_exclude = True
+                        break
+                
+                if should_exclude or file == output_file:
+                    continue
+                
+                file_path = os.path.join(root, file)
+                relative_path = os.path.relpath(file_path, '.')
+                
+                try:
+                    # Intentar leer como texto
+                    with open(file_path, 'r', encoding='utf-8') as source_file:
+                        content = source_file.read()
+                    
+                    # Escribir el path del archivo
+                    f.write(f"### {relative_path}:\n")
+                    f.write("```\n")  # Agregar bloque de código
+                    f.write(content)
+                    if not content.endswith('\n'):
+                        f.write('\n')
+                    f.write("```\n")  # Cerrar bloque de código
+                    f.write('\n---\n\n')
+                    
+                except UnicodeDecodeError:
+                    # Si es binario, no se puede leer
+                    f.write(f"### {relative_path}:\n")
+                    f.write("[INFO: Archivo binario - no se muestra el contenido]\n")
+                    f.write('\n---\n\n')
+                except Exception as e:
+                    # Otros errores
+                    f.write(f"### {relative_path}:\n")
+                    f.write(f"[ERROR: {str(e)}]\n")
+                    f.write('\n---\n\n')
+    
+    print(f"✅ Archivo '{output_file}' creado exitosamente!")
+    print(f"📁 Ubicación: {os.path.abspath(output_file)}")
+
+if __name__ == "__main__":
+    create_full_project_txt()
