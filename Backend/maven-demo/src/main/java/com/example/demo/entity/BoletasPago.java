@@ -9,14 +9,14 @@ import java.time.LocalDateTime;
 public class BoletasPago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idBoleta;
+    private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idEmpleado")
+    @JoinColumn(name = "empleado_id")
     private Empleados empleado;
 
     @ManyToOne
-    @JoinColumn(name = "idPago")
+    @JoinColumn(name = "pago_id")
     private Pagos pago;
 
     private String periodo;
@@ -32,12 +32,12 @@ public class BoletasPago {
     // Getters y Setters
 
 
-    public Long getIdBoleta() {
-        return this.idBoleta;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdBoleta(Long idBoleta) {
-        this.idBoleta = idBoleta;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Empleados getEmpleado() {

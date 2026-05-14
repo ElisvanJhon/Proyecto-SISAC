@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 public class Postulantes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPostulante;
+    private Long id;
 
     private String nombre;
     private String dni;
@@ -25,12 +25,12 @@ public class Postulantes {
     // Getters y Setters
 
 
-    public Long getIdPostulante() {
-        return this.idPostulante;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdPostulante(Long idPostulante) {
-        this.idPostulante = idPostulante;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {

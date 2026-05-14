@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 public class Notificaciones {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idNotificacion;
+    private Long id;
 
     private String mensaje;
     private LocalDateTime fechaEnvio;
@@ -22,12 +22,12 @@ public class Notificaciones {
     // Getters y Setters
 
 
-    public Long getIdNotificacion() {
-        return this.idNotificacion;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdNotificacion(Long idNotificacion) {
-        this.idNotificacion = idNotificacion;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getMensaje() {

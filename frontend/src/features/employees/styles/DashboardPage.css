@@ -1,0 +1,194 @@
+/* Dashboard Page Styles */
+
+.page-content {
+    padding: 24px;
+    padding-top: 80px; /* Espacio para el TopNavbar */
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeIn 0.3s ease-in;
+    background-color: #f8f9fa;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-header {
+    margin-bottom: 32px;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+/* Dashboard Cards Grid */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Dashboard Card */
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.dashboard-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.card-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.card-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* Dashboard Info Section */
+.dashboard-info {
+    margin-top: 32px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e5e7eb;
+}
+
+.info-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-item label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span {
+    font-size: 1rem;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .page-content {
+        padding: 16px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .card-value {
+        font-size: 2rem;
+    }
+
+    .card-icon {
+        font-size: 1.5rem;
+    }
+}

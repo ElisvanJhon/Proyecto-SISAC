@@ -1,0 +1,209 @@
+/* Tax Configuration Page Styles */
+
+.tax-config-page {
+    padding: 24px;
+    padding-top: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.tax-config-page h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-bottom: 24px;
+}
+
+/* Message Alert */
+.message-box {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.message-box.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.message-box.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+
+/* Step Navigation */
+.step-navigation {
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e5e7eb;
+    display: flex;
+    gap: 0;
+}
+
+.step-button {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #6b7280;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.step-button:hover:not(:disabled) {
+    color: #4f46e5;
+    background-color: #f3f4f6;
+}
+
+.step-button.active {
+    border-bottom-color: #4f46e5;
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.step-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Form Container */
+.tax-form-container {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.tax-form-container h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1f2937;
+}
+
+.tax-form-container p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-grid input,
+.form-grid select {
+    padding: 10px;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-grid input::placeholder {
+    color: #9ca3af;
+}
+
+/* File Input */
+input[type="file"] {
+    padding: 8px;
+    border: 2px dashed #d1d5db;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #f9fafb;
+}
+
+input[type="file"]:hover {
+    border-color: #4f46e5;
+    background-color: #f3f4f6;
+}
+
+/* Buttons */
+.btn-submit {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background-color: #4338ca;
+}
+
+.btn-submit:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.btn-submit.green {
+    background-color: #10b981;
+}
+
+.btn-submit.green:hover:not(:disabled) {
+    background-color: #059669;
+}
+
+/* Code Display */
+code {
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: #1f2937;
+}
+
+/* Loading State */
+.loading-text {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tax-config-page {
+        padding: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step-navigation {
+        flex-direction: column;
+    }
+
+    .step-button {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+
+    .step-button.active {
+        border-left-color: #4f46e5;
+        border-bottom-color: transparent;
+    }
+}

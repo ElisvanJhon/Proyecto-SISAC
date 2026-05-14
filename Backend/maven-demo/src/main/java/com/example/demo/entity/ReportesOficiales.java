@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class ReportesOficiales {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idReporte;
+    private Long id;
 
     private String tipo;
     private LocalDate fechaEmision;
@@ -24,12 +24,12 @@ public class ReportesOficiales {
     // Getters y Setters
 
 
-    public Long getIdReporte() {
-        return this.idReporte;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdReporte(Long idReporte) {
-        this.idReporte = idReporte;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTipo() {

@@ -59,7 +59,7 @@ public class JwtUtil {
 
     public String generateToken(String username, String role, Long userId) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("role", role);
+        claims.put("rol", role);  // Cambiado de "role" a "rol"
         claims.put("userId", userId);
         
         // (Simulación) Asumimos que el admin tributario gestiona el contribuyente ID 1
@@ -87,7 +87,7 @@ public class JwtUtil {
     }
 
     public String extractRole(String token) {
-        return extractClaim(token, claims -> claims.get("role", String.class));
+        return extractClaim(token, claims -> claims.get("rol", String.class));  // Cambiado de "role" a "rol"
     }
 
     public Long extractUserId(String token) {

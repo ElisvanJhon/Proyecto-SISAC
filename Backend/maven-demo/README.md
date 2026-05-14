@@ -10,29 +10,51 @@ Este es el proyecto SISAC-ERP migrado de Gradle a Maven.
 
 ## Comandos Maven
 
+**Nota:** Este proyecto usa Maven Wrapper, no necesitas instalar Maven.
+
 ### Compilar el proyecto
 ```bash
-mvn clean compile
+# Windows
+.\mvnw.cmd clean compile
+
+# Linux/Mac
+./mvnw clean compile
 ```
 
 ### Ejecutar las pruebas
 ```bash
-mvn test
+# Windows
+.\mvnw.cmd test
+
+# Linux/Mac
+./mvnw test
 ```
 
 ### Construir el JAR
 ```bash
-mvn clean package
+# Windows
+.\mvnw.cmd clean package
+
+# Linux/Mac
+./mvnw clean package
 ```
 
 ### Ejecutar la aplicación
 ```bash
-mvn spring-boot:run
+# Windows
+.\mvnw.cmd spring-boot:run
+
+# Linux/Mac
+./mvnw spring-boot:run
 ```
 
 ### Instalar dependencias
 ```bash
-mvn clean install
+# Windows
+.\mvnw.cmd clean install
+
+# Linux/Mac
+./mvnw clean install
 ```
 
 ## Estructura del proyecto

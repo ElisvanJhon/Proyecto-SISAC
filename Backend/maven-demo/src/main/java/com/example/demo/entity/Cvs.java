@@ -9,10 +9,10 @@ import java.time.LocalDateTime;
 public class Cvs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCV;
+    private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idPostulante")
+    @JoinColumn(name = "postulante_id")
     private Postulantes postulante;
 
     private LocalDate fechaRecepcion;
@@ -27,12 +27,12 @@ public class Cvs {
     // Getters y Setters
 
 
-    public Long getIdCV() {
-        return this.idCV;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdCV(Long idCV) {
-        this.idCV = idCV;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Postulantes getPostulante() {

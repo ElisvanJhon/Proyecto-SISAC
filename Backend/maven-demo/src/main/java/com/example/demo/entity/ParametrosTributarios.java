@@ -17,13 +17,23 @@ public class ParametrosTributarios {
     private Contribuyentes contribuyente;
 
     private Integer version;
+    
+    @Column(name = "tasa_igv")
     private BigDecimal tasaIgv;
+    
+    @Column(name = "reglas_redondeo")
     private String reglasRedondeo;
+    
+    @Column(name = "formato_exportacion")
     private String formatoExportacion;
+    
+    @Column(name = "vigente_desde")
     private LocalDate vigenteDesde;
+    
+    @Column(name = "vigente_hasta")
     private LocalDate vigenteHasta;
 
-    @Column(updatable = false)
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
     
     @PrePersist

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework:spring-jdbc:6.2.11" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework" artifactId="spring-jdbc" version="6.2.11" baseVersion="6.2.11" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.2.11/8aadfc8bed1630563c65bb5628e2175ecd508998/spring-jdbc-6.2.11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.2.11/5e459ac41a5bc07c1bc00c309ab8e45c6f040f04/spring-jdbc-6.2.11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.2.11/9a6663a57a57bd6aac74f1cc04c1d4bf7ef74ef0/spring-jdbc-6.2.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

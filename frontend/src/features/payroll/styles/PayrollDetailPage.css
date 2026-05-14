@@ -1,0 +1,264 @@
+.payroll-detail-page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.payroll-detail-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.payroll-detail-page h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.payroll-detail-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 32px;
+}
+
+.detail-section {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 24px;
+}
+
+.detail-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.detail-item span {
+  font-size: 16px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.totals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.total-card {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+}
+
+.total-card.highlight {
+  background-color: #d1fae5;
+  border-color: #10b981;
+}
+
+.total-card label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.total-card .amount {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.total-card.highlight .amount {
+  color: #059669;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.remuneraciones-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.remuneraciones-table thead {
+  background-color: #f3f4f6;
+}
+
+.remuneraciones-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.remuneraciones-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.remuneraciones-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.remuneraciones-table .text-right {
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.remuneraciones-table td.highlight {
+  color: #059669;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+
+.empty-state p {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563;
+}
+
+.btn-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #d1d5db;
+  color: #374151;
+}
+
+.btn-outline:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-borrador {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-calculado {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-aprobada, .badge-aprobado {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.loading, .error-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.loading {
+  color: #6b7280;
+}
+
+.error-message {
+  color: #dc2626;
+  background-color: #fee2e2;
+  border-radius: 8px;
+}
