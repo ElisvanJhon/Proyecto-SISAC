@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.data:spring-data-relational:3.5.4" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework.data" artifactId="spring-data-relational" version="3.5.4" baseVersion="3.5.4" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-relational/3.5.4/84e250733152861f0ac699c972a89c2a66395775/spring-data-relational-3.5.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-relational/3.5.4/77a455d9d38fdf2bac243013959a82a896edd16/spring-data-relational-3.5.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-relational/3.5.4/ec4b345791364fafd3bb2c8689fb8f96c3b944c/spring-data-relational-3.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

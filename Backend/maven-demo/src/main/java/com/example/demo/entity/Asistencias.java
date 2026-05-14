@@ -10,19 +10,29 @@ import java.time.LocalDateTime;
 public class Asistencias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAsistencia;
+    @Column(name = "idAsistencia")
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "idEmpleado")
     private Empleados empleado;
 
+    @Column(name = "fecha")
     private LocalDate fecha;
+    
+    @Column(name = "horasTrabajadas")
     private BigDecimal horasTrabajadas;
+    
+    @Column(name = "horasExtra")
     private BigDecimal horasExtra;
+    
+    @Column(name = "tardanza")
     private BigDecimal tardanza;
+    
+    @Column(name = "ausencia")
     private Boolean ausencia;
 
-    @Column(updatable = false)
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
     
     @PrePersist
@@ -33,12 +43,12 @@ public class Asistencias {
     
 
 
-    public Long getIdAsistencia() {
-        return this.idAsistencia;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdAsistencia(Long idAsistencia) {
-        this.idAsistencia = idAsistencia;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Empleados getEmpleado() {

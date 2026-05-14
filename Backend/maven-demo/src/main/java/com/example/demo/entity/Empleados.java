@@ -9,15 +9,19 @@ import java.time.LocalDateTime;
 public class Empleados {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idEmpleado;
+    @Column(name = "idEmpleado")
+    private Long id;
 
     private String nombre;
     private String dni;
     private String puesto;
+    
+    @Column(name = "sueldoBase")
     private BigDecimal sueldoBase;
+    
     private String estado;
 
-    @Column(updatable = false)
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
     
     @PrePersist
@@ -26,12 +30,12 @@ public class Empleados {
     // Getters y Setters
 
 
-    public Long getIdEmpleado() {
-        return this.idEmpleado;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdEmpleado(Long idEmpleado) {
-        this.idEmpleado = idEmpleado;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {

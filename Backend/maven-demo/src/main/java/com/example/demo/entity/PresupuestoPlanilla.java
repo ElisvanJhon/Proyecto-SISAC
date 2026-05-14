@@ -9,12 +9,16 @@ import java.time.LocalDateTime;
 public class PresupuestoPlanilla {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPresupuesto;
+    @Column(name = "idPresupuesto")
+    private Long id;
 
+    @Column(name = "periodo")
     private String periodo;
+    
+    @Column(name = "montoTotal")
     private BigDecimal montoTotal;
 
-    @Column(updatable = false)
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
     
     @PrePersist
@@ -23,12 +27,12 @@ public class PresupuestoPlanilla {
     // Getters y Setters
 
 
-    public Long getIdPresupuesto() {
-        return this.idPresupuesto;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdPresupuesto(Long idPresupuesto) {
-        this.idPresupuesto = idPresupuesto;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPeriodo() {

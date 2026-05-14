@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class Convocatorias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idConvocatoria;
+    private Long id;
 
     private String titulo;
     private String descripcion;
@@ -24,12 +24,12 @@ public class Convocatorias {
     // Getters y Setters
 
 
-    public Long getIdConvocatoria() {
-        return this.idConvocatoria;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setIdConvocatoria(Long idConvocatoria) {
-        this.idConvocatoria = idConvocatoria;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitulo() {

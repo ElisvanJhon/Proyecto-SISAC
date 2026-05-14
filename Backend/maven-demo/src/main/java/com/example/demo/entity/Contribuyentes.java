@@ -14,14 +14,23 @@ public class Contribuyentes {
     private Long id;
 
     private String ruc;
+    
+    @Column(name = "razon_social")
     private String razonSocial;
+    
     private String regimen;
     private String domicilio;
+    
+    @Column(name = "representante_legal")
     private String representanteLegal;
+    
+    @Column(name = "cuenta_bancaria")
     private String cuentaBancaria;
 
-    @Column(updatable = false)
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
+    
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
     @PrePersist

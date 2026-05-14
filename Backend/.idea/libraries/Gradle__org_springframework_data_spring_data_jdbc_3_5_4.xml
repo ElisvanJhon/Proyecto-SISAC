@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.data:spring-data-jdbc:3.5.4" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework.data" artifactId="spring-data-jdbc" version="3.5.4" baseVersion="3.5.4" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jdbc/3.5.4/fae35ae4bf38e5f80b6ce0f6f21714727b8f3032/spring-data-jdbc-3.5.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jdbc/3.5.4/ad0c11d8e520ab5ba978361352395808faa83609/spring-data-jdbc-3.5.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jdbc/3.5.4/ba1850ef268f43df0671e7246811b2c0e1a6ca31/spring-data-jdbc-3.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

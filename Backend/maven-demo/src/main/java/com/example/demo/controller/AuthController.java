@@ -43,10 +43,10 @@ public class AuthController {
             authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword())
             );
-            System.out.println(" Authentication successful");
+            System.out.println("✅ Authentication successful");
 
             UsuarioAdmin usuario = userDetailsService.findByEmail(loginRequest.getEmail());
-            System.out.println(" Usuario encontrado: " + usuario.getEmail() + ", Rol: " + usuario.getRole().getNombre());
+            System.out.println("🔍 Usuario encontrado: " + usuario.getEmail() + ", Rol: " + usuario.getRole().getNombre());
             
             String token = jwtUtil.generateToken(
                 usuario.getEmail(), 

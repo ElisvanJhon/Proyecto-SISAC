@@ -13,10 +13,15 @@ public class Auditoria {
     private String usuario;
     private String entidad;
     private String accion;
+    
+    @Column(name = "valores_antes", columnDefinition = "TEXT")
     private String valoresAntes;
+    
+    
+    @Column(name = "valores_despues", columnDefinition = "TEXT")
     private String valoresDespues;
 
-    @Column(updatable = false)
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
     public Auditoria() {}
