@@ -1,0 +1,3 @@
+-- V3: Standardize remaining primary keys to 'id'
+-- Note: All tables already have 'id' as primary key from previous migrations.
+-- This migration is intentionally empty as changes were already applied.

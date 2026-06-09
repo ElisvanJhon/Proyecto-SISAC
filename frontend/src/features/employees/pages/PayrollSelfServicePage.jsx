@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Importamos useNavigate
 import { Briefcase, FileText, Download, ArrowLeft } from 'lucide-react';
-import PaystubDownloadWidget from '@components/PaystubDownloadWidget.jsx';
+// import PaystubDownloadWidget from '@components/PaystubDownloadWidget.jsx';
+import PaystubDownloadWidget from '../components/PaystubDownloadWidget.jsx';
 import '@styles_e/PayrollSelfServicePage.css';
 
 // Datos fijos de simulación para la demostración

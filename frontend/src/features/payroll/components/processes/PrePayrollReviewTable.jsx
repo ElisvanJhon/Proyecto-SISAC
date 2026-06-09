@@ -25,6 +25,7 @@ const PrePayrollReviewPage = () => {
         }
     };
 
+    /*
     const handleCalculate = async (id) => {
         if (!window.confirm('¿Iniciar cálculo de nómina?')) return;
         
@@ -37,6 +38,26 @@ const PrePayrollReviewPage = () => {
             // Cargar la planilla actualizada con sus remuneraciones
             const { getPayrollById } = await import('../../api/payroll');
             const updatedPayroll = await getPayrollById(id);
+            console.log('🔄 Planilla actualizada después del cálculo:', updatedPayroll);
+            setSelectedPayroll(updatedPayroll);
+        } catch (error) {
+            console.error('❌ Error al calcular:', error);
+            alert('Error al calcular: ' + error.message);
+        }
+    };
+    */
+   const handleCalculate = async (id) => {
+        if (!window.confirm('¿Iniciar cálculo de nómina?')) return;
+        
+        try {
+            console.log('🧮 Iniciando cálculo para planilla ID:', id);
+            const result = await calculatePayroll(id);
+            console.log('✅ Resultado del cálculo:', result);
+            alert('Cálculo finalizado correctamente');
+            
+            await loadPayrolls();
+            // ¡SOLUCIÓN AQUÍ! Usar la función importada normalmente arriba, no dinámicamente
+            const updatedPayroll = await getPayrollById(id); 
             console.log('🔄 Planilla actualizada después del cálculo:', updatedPayroll);
             setSelectedPayroll(updatedPayroll);
         } catch (error) {

@@ -1,8 +1,10 @@
 // src/features/payroll/pages/EmployeePayrollDetailsPage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Sidebar from '@ui/Sidebar.jsx'; // Asegúrate de que la ruta sea correcta
-import Navbar from '@ui/Navbar.jsx'; // Asegúrate de que la ruta sea correcta
+// import Sidebar from '@ui/Sidebar.jsx'; // Asegúrate de que la ruta sea correcta
+// import Navbar from '@ui/Navbar.jsx'; // Asegúrate de que la ruta sea correcta
+import Sidebar from '../../../../components/ui/SideBar.jsx';
+import Navbar from '../../../../components/ui/Navbar.jsx';
 import '@styles_e/DashboardPage.css'; // O el archivo CSS que uses para el layout
 
 const EmployeePayrollDetailsPage = ({ user, onLogout }) => {

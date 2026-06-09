@@ -1,8 +1,10 @@
 // src/features/payroll/pages/LegalParametersPage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Sidebar from '@ui/Sidebar.jsx'; // Asegúrate de que la ruta sea correcta
-import Navbar from '@ui/Navbar.jsx'; // Asegúrate de que la ruta sea correcta
+// import Sidebar from '@ui/Sidebar.jsx'; // Asegúrate de que la ruta sea correcta
+// import Navbar from '@ui/Navbar.jsx'; // Asegúrate de que la ruta sea correcta
+import Sidebar from '../../../../components/ui/SideBar.jsx';
+import Navbar from '../../../../components/ui/Navbar.jsx';
 import { Coins, Settings } from 'lucide-react'; // Simulación de iconos, asegúrate de tener lucide-react instalado
 
 const LegalParametersPage = ({ legal, centers, user, onLogout }) => {

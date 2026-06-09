@@ -44,11 +44,26 @@ const MonthlyNoveltyEntry = () => {
     }
   };
 
+  /*
   const loadNovelties = async () => {
     try {
       if (!selectedEmployee) return;
       const employeeId = parseInt(selectedEmployee);
       const data = await getAllAttendances(periodo, employeeId);
+      setNovelties(data);
+    } catch (error) {
+      console.error('Error loading novelties:', error);
+      setNovelties([]);
+    }
+  };
+  */
+  const loadNovelties = async () => {
+    try {
+      if (!selectedEmployee) return;
+      const employeeId = parseInt(selectedEmployee);
+      // ¡SOLUCIÓN AQUÍ! Quitar el guion del periodo para que el backend lo entienda
+      const apiPeriodo = periodo.replace('-', ''); 
+      const data = await getAllAttendances(apiPeriodo, employeeId);
       setNovelties(data);
     } catch (error) {
       console.error('Error loading novelties:', error);

@@ -20,12 +20,8 @@ const PayrollListPage = () => {
       setLoading(true);
       const data = await getAllPayrolls();
       
-      let filtered = data;
-      if (filterEstado) {
-        filtered = data.filter(p => p.estado === filterEstado);
-      }
-      
-      setPayrolls(filtered);
+      // CAMBIO: Comenta esta parte o simplifícala así para la demo
+      setPayrolls(data); // <--- Muestra TODO, no filtres nada por ahora
       setError(null);
     } catch (err) {
       setError('Error al cargar planillas: ' + err.message);
